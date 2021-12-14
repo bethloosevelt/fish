@@ -215,6 +215,9 @@ export const FISH_COMPATABILITY_DATA: FishCompatabilityData = {
       "south-american-cichlids-dwarf",
       "bristlenose-catfish",
       "corydoras-catfish",
+      "eels",
+      "flying-fox",
+      "large-gouramis",
     ],
     semiCompatibleFish: [
       "barbs",
@@ -222,6 +225,8 @@ export const FISH_COMPATABILITY_DATA: FishCompatabilityData = {
       "african-cichlids",
       "south-american-cichlids-medium-large",
       "other-catfish",
+      "danios-whiteclouds-medakas",
+      "dwarf-gouramis",
     ],
   },
   gudgeons: {
