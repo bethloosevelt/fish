@@ -1,12 +1,56 @@
+export type FishId =
+  | "angel-fish"
+  | "barbs"
+  | "betta-female"
+  | "betta-male"
+  | "african-cichlids"
+  | "south-american-cichlids-dwarf"
+  | "south-american-cichlids-medium-large"
+  | "bristlenose-catfish"
+  | "corydoras-catfish"
+  | "tandanus-and-eel-tailed-catfish"
+  | "other-catfish"
+  | "danios-whiteclouds-medakas"
+  | "discus"
+  | "eels"
+  | "flying-fox"
+  | "common-gold-fish"
+  | "fancy-goldfish"
+  | "dwarf-gouramis"
+  | "large-gouramis"
+  | "gudgeons"
+  | "guppies"
+  | "killfish"
+  | "loaches-and-botia"
+  | "mollies"
+  | "murray-cod"
+  | "oscars-and-other-large-cichlids"
+  | "silver-and-golden-perch"
+  | "plants"
+  | "platys"
+  | "rainbow-fish"
+  | "rasbora"
+  | "saratoga"
+  | "silver-dollar"
+  | "shrimp-yabbies-crabs"
+  | "snails"
+  | "swordtails"
+  | "tetras";
+
 export interface Fish {
   name: string;
-  id: string;
+  id: FishId;
 }
 
 // all fish constants 🐟
 export const ANGEL_FISH: Fish = {
   name: "Angel Fish",
   id: "angel-fish",
+};
+
+export const Barbs: Fish = {
+  name: "Barbs",
+  id: "barbs",
 };
 
 export const BETTA_FEMALE: Fish = {
@@ -19,12 +63,12 @@ export const BETTA_MALE: Fish = {
   id: "betta-male",
 };
 
-export const AMERICAN_CICHLIDS: Fish = {
+export const AFRICAN_CICHLIDS: Fish = {
   name: "African Cichlids",
   id: "african-cichlids",
 };
 
-export const SOUT_AMERICAN_CICHLIDS_DWARF: Fish = {
+export const SOUTH_AMERICAN_CICHLIDS_DWARF: Fish = {
   name: "South American Cichlids (dwarf)",
   id: "south-american-cichlids-dwarf",
 };
@@ -164,7 +208,7 @@ export const SILVER_DOLLAR: Fish = {
   id: "silver-dollar",
 };
 
-export const SHRIP_YABBIES_CRABS: Fish = {
+export const SHRIMP_YABBIES_CRABS: Fish = {
   name: "Shrimp/Yabbies/Crabs",
   id: "shrimp-yabbies-crabs",
 };
@@ -183,3 +227,47 @@ export const TETRAS: Fish = {
   name: "Tetras",
   id: "tetras",
 };
+
+export const ALL_FISH: Fish[] = [
+  ANGEL_FISH,
+  BETTA_FEMALE,
+  BETTA_MALE,
+  AFRICAN_CICHLIDS,
+  SOUTH_AMERICAN_CICHLIDS_DWARF,
+  SOUTH_AMERICAN_CICHLIDS_MEDIUM_LARGE,
+  BRISTLENOSE_CATFISH,
+  CORYDORAS_CATFISH,
+  TANDANUS_AND_EEL_TAILED_CATFISH,
+  OTHER_CATFISH,
+  DANIOS_WHITECLOUDS_MEDAKAS,
+  DISCUS,
+  EELS,
+  FLYING_FOX,
+  COMMON_GOLD_FISH,
+  FANCY_GOLDFISH,
+  DWARF_GOURAMIS,
+  LARGE_GOURAMIS,
+  GUDGEONS,
+  GUPPIES,
+  KILLFISH,
+  LOACHES_AND_BOTIA,
+  MOLLIES,
+  MURRAY_COD,
+  OSCARS_AND_OTHER_LARGE_CICHLIDS,
+  SILVER_AND_GOLDEN_PERCH,
+  PLANTS,
+  PLATYS,
+  RAINBOW_FISH,
+  RASBORA,
+  SARATOGA,
+  SILVER_DOLLAR,
+  SHRIMP_YABBIES_CRABS,
+  SNAILS,
+  SWORDTAILS,
+  TETRAS,
+];
+
+export const FISH_NAMES = ALL_FISH.reduce((soFar, curr) => ({
+  ...soFar,
+  [curr.id]: curr.name,
+}));
